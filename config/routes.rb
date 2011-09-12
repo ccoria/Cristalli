@@ -1,4 +1,14 @@
 Cristalli::Application.routes.draw do
+  match '/home', :to => 'pages#home'
+
+  get "pages/concept"
+
+  get "pages/modules"
+
+  get "pages/photos"
+
+  get "pages/contact"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
