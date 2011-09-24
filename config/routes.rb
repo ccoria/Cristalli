@@ -6,7 +6,6 @@ Cristalli::Application.routes.draw do
   match '/conceito', :to => 'pages#concept'
   
   match '/modulos', :to => 'pages#modules'
-  match '/módulos', :to => 'pages#modules'
   
   match '/fotos', :to => 'pages#photos'
   
