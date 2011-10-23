@@ -1,12 +1,54 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Cristalli</title>
+  <title>Cristalli - Eventos Personalizados | <%= @title %></title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <%= csrf_meta_tags %>
+  
+  <link rel="stylesheet" href="css/html5_boilerplate.css">
+  <link rel="stylesheet" href="css/style.css">
+  
 </head>
 <body>
-
-<%= yield %>
-
+    <div id="container">
+        <header>
+            <a href="/home">
+                <img id="logo" class="logo" 
+                     width="340" height="124"
+                     alt="Cristalli Eventos Personalizados" 
+                     title="Cristalli Eventos Personalizados"
+                     src="images/logo.png" />
+             </a>
+        </header>
+        <div id="main" class="main" role="main">
+            <%= yield %>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/conceito">
+                        <img src="images/menu/conceito.png" width="133" height="94" alt="Conceito" title="Conceito">
+                    </a>
+                </li>
+                <li>
+                    <a href="/modulos">
+                        <img src="images/menu/modulos.png" width="125" height="77" alt="Modulos" title="Modulos">
+                    </a>
+                </li>
+                <li>
+                    <a href="/fotos">
+                        <img src="images/menu/fotos.png" width="118" height="72" alt="Fotos" title="Fotos">
+                    </a>
+                </li>
+                <li>
+                    <a href="/contato">
+                        <img src="images/menu/contato.png" width="120" height="79" alt="Contato" title="Contato">
+                    <a>
+                </li>
+            </ul>
+        </nav>
+        <footer>
+        </footer>
+    </div> <!--! end of #container -->
 </body>
 </html>
