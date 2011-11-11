@@ -96,6 +96,8 @@ footer a {
     z-index: 1;
     background: rgba(255, 255, 255);
     background: rgba(255, 255, 255, 0.6);
+    width:600px; 
+    height:400px;
 }
 
 .box a {
@@ -107,6 +109,15 @@ footer a {
     font-style: normal;
     font-weight: 200;
     font-size: 30px;
+    margin-bottom: 35px;
+}
+
+.box h2 {
+    font-style: normal;
+    font-weight: 200;
+    font-size: 20px;
+    margin-bottom: 5px;
+    margin-top: 0px;
 }
 
 .box p {
@@ -144,6 +155,51 @@ footer a {
     font-size: 15px;
     
 }
+
+#modules {
+    
+}
+
+#modules div {
+    border: 1px solid #c4bbaa;
+    padding: 10px;
+    width: 263px;
+    height: 115px;
+    position: relative;
+    display: block;
+    float: left;
+    _margin: 0px;
+    padding-left: 17px;
+    background-color: #e0d8ca;
+    
+    behavior: url(/css/border-radius.htc);
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -khtml-border-radius: 15px;
+    border-radius: 15px;
+}
+
+#modules ul {
+    list-style: none;
+    padding-left: 5px;
+}
+
+.module_1 {
+    margin: 0px 16px 0px 0px;
+}
+
+.module_ {
+    margin: 15px 0px 0px 0px;
+}
+
+.module_3 {
+    margin: 15px 16px 0px 0px;
+}
+
+.module_4 {
+    margin: 15px 0px 0px 0px;
+}
+
 
 
 

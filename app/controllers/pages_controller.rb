@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 class PagesController < ApplicationController
   def home
     @title = "Home"
@@ -8,7 +10,7 @@ class PagesController < ApplicationController
   end
 
   def modules
-    @title = "Modulos"
+    @title = "Módulos"
   end
 
   def photos
