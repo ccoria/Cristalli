@@ -1,3 +1,31 @@
-<div id="photos" class="box rounded_corners" width="600px" height="360px" style="display:table-cell; text-align:center;  vertical-align:bottom;">
-    <img src="images/galleries/3a.JPG" style="vertical-align:bottom; position:relative; margin-top:20px " height="360px" width="600px" / >
+<div class="photo_menu photo_menu_left">
+    <nav>
+        <div class="col1">
+            <% (1..21).each do |thumb_index| %>
+            
+            <a href="/fotos/<%= thumb_index %>">
+                <img src="/images/galleries/3a.JPG" height="35px" width="35px" />
+            </a>
+            
+            <% end %>
+        </div>
+    </nav>
+</div>
+
+<div id="photos" class="main box">
+    <img src="/images/galleries/3a.JPG" style="vertical-align:bottom; position:relative; margin-top:20px " height="360px" width="600px" / >
+</div>
+
+<div class="photo_menu photo_menu_right">
+    <nav>
+        <div class="col1">
+            <% (21..41).each do |thumb_index| %>
+            
+            <a href="/fotos/<%= thumb_index %>">
+                <img src="/images/galleries/3a.JPG" height="35px" width="35px" />
+            </a>
+            
+            <% end %>
+        </div>
+    </nav>
 </div>

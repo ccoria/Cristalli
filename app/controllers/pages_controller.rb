@@ -15,6 +15,7 @@ class PagesController < ApplicationController
 
   def photos
     @title = "Fotos"
+    @photos = (1..21)
   end
 
   def contact

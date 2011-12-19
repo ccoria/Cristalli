@@ -8,6 +8,7 @@ Cristalli::Application.routes.draw do
   match '/modulos', :to => 'pages#modules'
   
   match '/fotos', :to => 'pages#photos'
+  match '/fotos/:id', :to => 'pages#photos'
   
   match '/contato', :to => 'pages#contact'
 
