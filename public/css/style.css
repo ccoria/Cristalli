@@ -240,8 +240,12 @@ footer a {
     margin: 15px 0px 0px 0px;
 }
 
+#contact .intro {
+    margin-top: 27px;
+}
+
 #contact .general {
-    margin-top: 30px;
+    margin-top: 27px;
     margin-left: 0px;
     font-size: 15px;
 }
