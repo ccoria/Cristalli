@@ -15,7 +15,7 @@ class PagesController < ApplicationController
 
   def photos
     @title = "Fotos"
-    @photos = (1..21)
+    @photo = params[:id] || 0
   end
 
   def contact
