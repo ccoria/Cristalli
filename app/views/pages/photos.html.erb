@@ -4,7 +4,7 @@
             <% (1..21).each do |thumb_index| %>
             
             <a href="/fotos/<%= thumb_index %>">
-                <img src="/images/galleries/0.JPG" height="35px" width="35px" />
+                <img src="/images/thumbs/<%= thumb_index %>.jpg" height="35px" width="35px" />
             </a>
             
             <% end %>
@@ -13,7 +13,7 @@
 </div>
 
 <div id="photos" class="main box">
-    <img src="/images/galleries/<%= @photo %>.jpg" style="vertical-align:bottom; position:relative; margin-top:20px " height="360px" width="600px" / >
+    <img src="/images/photos/<%= @photo %>.jpg" style="vertical-align:bottom; position:relative; margin-top:20px " height="360px" width="600px" / >
 </div>
 
 <div class="photo_menu photo_menu_right">
@@ -22,7 +22,7 @@
             <% (22..42).each do |thumb_index| %>
             
             <a href="/fotos/<%= thumb_index %>">
-                <img src="/images/galleries/0.JPG" height="35px" width="35px" />
+                <img src="/images/thumbs/<%= thumb_index %>.jpg" height="35px" width="35px" />
             </a>
             
             <% end %>
