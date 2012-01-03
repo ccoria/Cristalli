@@ -3,6 +3,7 @@ body {
 	background: #a7997e;
 	
 	background: -moz-linear-gradient(top, #8d8065, #c3baa9 10%); /* for firefox 3.6+ */
+	font-family: Lucida, Helvetica Neue;
     
 	margin: 0px;
 	padding: 0px;
@@ -257,6 +258,23 @@ footer a {
 #photos {
     height: 400px;
     top: 160px;
+    text-align: center;
+    background: none;
+    
+}
+
+#photos .photo {
+}
+
+#photos img {
+    -border: 20px solid #645e5d;
+    border: 10px solid #f6f4f0;
+    border: 10px solid #504a49;
+    -margin-top:20px;
+}
+
+#photos .prev_and_next {
+    margin-top: 5px;
 }
 
 .photo_menu {

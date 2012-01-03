@@ -12,14 +12,28 @@
     </nav>
 </div>
 
-<div id="photos" class="main box">
-    <img src="/images/photos/<%= @photo %>.jpg" style="vertical-align:bottom; position:relative; margin-top:20px " height="360px" width="600px" / >
+<div id="photos" class="box">
+    <div id="photo" class="photo">
+        <img src="/images/photos/<%= @photo %>.jpg" / >
+        
+        <div class="prev_and_next">
+            <% if @photo > 0 %>
+                <a href="/fotos/<%= @photo-1 %>">Anterior</a>
+            <% end %>
+            <% if @photo > 0 and @photo < @photos_count %>
+             | 
+            <% end %>
+            <% if @photo < @photos_count %>
+            <a href="/fotos/<%= @photo+1 %>">Próxima</a>
+            <% end %>
+        </div>
+    </div>
 </div>
 
 <div class="photo_menu photo_menu_right">
     <nav>
         <div class="col1">
-            <% (22..42).each do |thumb_index| %>
+            <% (22..@photos_count).each do |thumb_index| %>
             
             <a href="/fotos/<%= thumb_index %>">
                 <img src="/images/thumbs/<%= thumb_index %>.jpg" height="35px" width="35px" />

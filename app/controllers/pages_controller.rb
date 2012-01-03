@@ -15,7 +15,13 @@ class PagesController < ApplicationController
 
   def photos
     @title = "Fotos"
-    @photo = params[:id] || 0
+    @photos_count = 42
+    @photo = (params[:id] || 0).to_i
+    
+    # avoiding the url fotos/0
+    if params[:id] and @photo == 0
+      redirect_to "/fotos"
+    end
   end
 
   def contact
