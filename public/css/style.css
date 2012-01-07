@@ -274,7 +274,11 @@ footer a {
 }
 
 #photos .prev_and_next {
-    margin-top: 5px;
+    margin-top: 7px;
+}
+
+#photos .prev_and_next a {
+    font-weight: 400;
 }
 
 .photo_menu {
