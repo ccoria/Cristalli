@@ -197,22 +197,29 @@ footer a {
 }
 
 #modules .mini-box div {
-    border: 1px solid #c4bbaa;
-    padding: 10px;
-    width: 263px;
-    height: 115px;
+    border: 1px solid #ada28d;
+    width: 187px;
+    _height: 115px;
     position: relative;
     display: block;
     float: left;
-    _margin: 0px;
-    padding-left: 17px;
-    background-color: #e0d8ca;
+    background-color: #f8f6f2;
     
-    behavior: url(/css/border-radius.htc);
+    /*behavior: url(/css/border-radius.htc);
     -moz-border-radius: 15px;
     -webkit-border-radius: 15px;
     -khtml-border-radius: 15px;
-    border-radius: 15px;
+    border-radius: 15px;*/
+}
+
+#modules .mini-box h2 {
+    font-size: 18px;
+    color: white;
+    
+    margin: 0px;
+    border: 0px solid #c4bbaa;
+    background: #ada28d;
+    padding: 5px 0px 5px 10px;
 }
 
 .mini-box {
@@ -224,12 +231,20 @@ footer a {
     padding-left: 5px;
 }
 
+.module_big {
+    height: 289px;
+}
+
+.module_small {
+    height: 136px;
+}
+
 .module_1 {
     margin: 0px 16px 0px 0px;
 }
 
-.module_ {
-    margin: 15px 0px 0px 0px;
+.module_2 {
+    margin: 0px 16px 0px 0px;
 }
 
 .module_3 {
@@ -237,7 +252,7 @@ footer a {
 }
 
 .module_4 {
-    margin: 15px 0px 0px 0px;
+    margin: -138px 0px 0px 0px;
 }
 
 #contact .intro {
@@ -274,7 +289,7 @@ footer a {
 }
 
 #photos .prev_and_next {
-    margin-top: 7px;
+    margin-top: 8px;
 }
 
 #photos .prev_and_next a {
