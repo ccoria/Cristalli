@@ -199,7 +199,6 @@ footer a {
 #modules .mini-box div {
     border: 1px solid #ada28d;
     width: 187px;
-    _height: 115px;
     position: relative;
     display: block;
     float: left;
@@ -213,12 +212,18 @@ footer a {
 }
 
 #modules .mini-box h2 {
-    font-size: 18px;
+    font-size: 19px;
     font-weight: 300;
     
-    margin: 0px;
-    background: #dad4c6;
-    padding: 5px 0px 5px 10px;
+    margin: 0px 0px 0px 0px;
+    _background: #e7e4d9;
+    background: #e4e1de;
+    padding: 7px 0px 5px 6px;
+}
+
+#modules .mini-box h2 img {
+    margin-top: -5px;
+    margin-right: 5px;
 }
 
 .mini-box {
@@ -226,13 +231,16 @@ footer a {
 }
 
 #modules ul {
-    list-style: none;
+    list-style: none /*disc inside*/;
     padding-left: 13px;
-    margin-top: 10px;
+    margin-top: 11px;
+    
+    font-size: 16px;
+    text-align: left;
 }
 
 #modules ul li {
-    margin-top: 5px;
+    margin-top: 9px;
 }
 
 .module_big {
@@ -325,7 +333,6 @@ footer a {
 
 .photo_menu a {
     text-decoration: none;
-    _display: block;
 }
 
 .photo_menu img {

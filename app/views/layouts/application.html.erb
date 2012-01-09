@@ -26,24 +26,20 @@
         <nav id="main_menu">
             <ul>
                 <li>
-                    <a href="/conceito">
-                        <img src="/images/menu/conceito.png" width="135" height="89" alt="Conceito" title="Conceito">
-                    </a>
+                    <%= link_to image_tag("/images/menu/conceito.png", :size => "135x89", :alt => "Conceito"),
+                                          "/conceito" %>
                 </li>
                 <li>
-                    <a href="/modulos">
-                        <img src="/images/menu/modulos.png" width="125" height="76" alt="Modulos" title="Modulos">
-                    </a>
+                    <%= link_to image_tag("/images/menu/modulos.png", :size => "125x76", :alt => "Módulos"),
+                                          "/modulos" %>
                 </li>
                 <li>
-                    <a href="/fotos">
-                        <img src="/images/menu/fotos.png" width="114" height="72" alt="Fotos" title="Fotos">
-                    </a>
+                    <%= link_to image_tag("/images/menu/fotos.png", :size => "114x72", :alt => "Fotos"),
+                                          "/fotos" %>
                 </li>
                 <li>
-                    <a href="/contato">
-                        <img src="/images/menu/contato.png" width="125" height="76" alt="Contato" title="Contato">
-                    <a>
+                    <%= link_to image_tag("/images/menu/contato.png", :size => "125x76", :alt => "Contato"),
+                                          "/contato" %>
                 </li>
             </ul>
         </nav>
