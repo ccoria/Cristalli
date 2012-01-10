@@ -44,7 +44,8 @@ header #logo {
 	
 	background: #c4bbaa; /* for non-css3 browsers */
     background: -moz-linear-gradient(top, #c4bbaa, #e3dfd6); /* for firefox 3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, from(#c4bbaa), to(#e3dfd6)); /* for webkit browsers */
+    background: -webkit-gradient(linear, left top, left bottom, from(#c4bbaa), to(#e3dfd6)); /* for old webkit browsers */
+    background: -webkit-linear-gradient(top, #c4bbaa, #e3dfd6); /* for new webkit browsers */
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c4bbaa', endColorstr='#e3dfd6'); /* for IE */
 }
 
