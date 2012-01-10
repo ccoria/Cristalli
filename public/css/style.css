@@ -41,8 +41,8 @@ header #logo {
 .main {
 	height: 500px;
 	text-align: center;
-	min-width: 1048px;
-	max-width: auto;
+	min-width: 1024px;
+	width: auto;
 	
 	background: #c4bbaa; /* for non-css3 browsers */
     background: -moz-linear-gradient(top, #c4bbaa, #e3dfd6); /* for firefox 3.6+ */
