@@ -3,6 +3,7 @@ body {
 	background: #a7997e;
 	
 	background: -moz-linear-gradient(top, #8d8065, #c3baa9 10%); /* for firefox 3.6+ */
+	background: -webkit-linear-gradient(top, #8d8065, #c3baa9 20%); /* for webkit browsers */
 	font-family: Lucida, Helvetica Neue;
     
 	margin: 0px;
@@ -39,12 +40,12 @@ header #logo {
 	border: 1px solid #c4bbaa;
 	height: 500px;
 	text-align: center;
+	min-width: 1024;
 	
-	background: #; /* for non-css3 browsers *
-
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a7997e', endColorstr='#000000'); /* for IE *
-    background: -webkit-gradient(linear, left top, left bottom, from(#a7997e), to(#000)); /* for webkit browsers */
+	background: #c4bbaa; /* for non-css3 browsers */
     background: -moz-linear-gradient(top, #c4bbaa, #e3dfd6); /* for firefox 3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, from(#c4bbaa), to(#e3dfd6)); /* for webkit browsers */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c4bbaa', endColorstr='#e3dfd6'); /* for IE */
 }
 
 nav#main_menu {
@@ -231,7 +232,7 @@ footer a {
 }
 
 #modules ul {
-    list-style: none /*disc inside*/;
+    list-style: none;
     padding-left: 13px;
     margin-top: 11px;
     
@@ -267,27 +268,11 @@ footer a {
     margin: -138px 0px 0px 0px;
 }
 
-#contact .intro {
-    margin-top: 27px;
-}
-
-#contact .general {
-    margin-top: 27px;
-    margin-left: 0px;
-    font-size: 15px;
-}
-
-#contact .tel {
-    font-size:14px;
-    font-weight: 500;
-}
-
 #photos {
     height: 400px;
     top: 160px;
     text-align: center;
     background: none;
-    
 }
 
 #photos .photo {
@@ -313,6 +298,7 @@ footer a {
     margin-left: auto;
     margin-right: auto;
     left: 0px;
+    right: 0px;
     
     top: 10px;
     height: 600px;
@@ -324,7 +310,7 @@ footer a {
 }
 
 .photo_menu_right {
-    left: 1030px;
+    left: 830px;
 }
 
 .photo_menu nav {
@@ -344,5 +330,34 @@ footer a {
     display: inline;
 }   
 
+#contact ul {
+    list-style: none;
+    padding-left: 5px;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+#contact ul li {
+    margin-top: 10px;
+}
+
+#contact ul img {
+    margin-right: 10px;
+}
+
+#contact .intro {
+    margin-top: 27px;
+}
+
+#contact .general {
+    margin-top: 27px;
+    margin-left: 0px;
+    font-size: 15px;
+}
+
+#contact .tel {
+    font-size:14px;
+    font-weight: 500;
+}
 
 

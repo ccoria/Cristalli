@@ -6,3 +6,4 @@ tmp/
 .webbynode/
 config/database.yml
 .pushand
+.tmproj

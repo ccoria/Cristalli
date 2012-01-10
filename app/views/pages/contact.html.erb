@@ -1,13 +1,19 @@
 <div id="contact" class="main">
     <h1><img src="images/titles/contato.png" width="139" height="17" alt="Contato" title="Contato"></h1>
-    <div class="box content _rounded_corners">
-    <p class="intro">
-     Agende uma visita para qualquer tipo de esclarescimento:
-    </p>
-    <p class="general">
-         Email: <a class="email" href="mailto:contato@cristallieventos.com.br">contato@cristallieventos.com.br</a>
-         <br/>Facebook: <a class="url" rel="me" href="http://facebook.com/cristallieventos">http://www.facebook.com/cristallieventos</a>
-         <br/>Telefones: <span class="tel">(11) 8932-3136</span> ou <span class="tel">(11) 9149-2131</span>
-    </p>
+    <div class="box content">
+        <ul>
+            <li>
+                <%= image_tag("/images/icons/phone.png", :size => "35x36", :alt => "Telefone", :alt => "Telefone") %>
+                <span class="tel">(11) 8932-3136</span> ou <span class="tel">(11) 9149-2131</span>
+            </li>
+            <li>
+                <%= image_tag("/images/icons/mail.png", :size => "35x36", :alt => "Email", :alt => "Email") %>
+                <a class="email" href="mailto:contato@cristallieventos.com.br">contato@cristallieventos.com.br</a>
+            </li>
+            <li>
+                <%= image_tag("/images/icons/facebook.png", :size => "35x36", :alt => "Facebook", :alt => "Facebook") %>
+                <a class="url" rel="me" href="http://facebook.com/cristallieventos">http://www.facebook.com/cristallieventos</a>
+            </li>
+        </ul>
     </div>
 </div>
