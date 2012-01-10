@@ -3,7 +3,7 @@ body {
 	background: #a7997e;
 	
 	background: -moz-linear-gradient(top, #8d8065, #c3baa9 10%); /* for firefox 3.6+ */
-	background: -webkit-linear-gradient(top, #8d8065, #c3baa9 20%); /* for webkit browsers */
+	background: -webkit-linear-gradient(top, #8d8065, #c3baa9 10%); /* for webkit browsers */
 	font-family: Lucida, Helvetica Neue;
     
 	margin: 0px;
@@ -279,10 +279,7 @@ footer a {
 }
 
 #photos img {
-    -border: 20px solid #645e5d;
-    border: 10px solid #f6f4f0;
-    border: 10px solid #504a49;
-    -margin-top:20px;
+    border: 5px solid #504a49;
 }
 
 #photos .prev_and_next {
@@ -302,7 +299,7 @@ footer a {
     
     top: 10px;
     height: 600px;
-    width: 200px;    
+    width: 180px;    
 }
 
 .photo_menu_left {
@@ -322,8 +319,8 @@ footer a {
 }
 
 .photo_menu img {
-    border: 7px solid #645e5d;
-    margin-bottom: 5px;
+    border: 5px solid #645e5d;
+    margin: 0px 0px 5px 0px;
 }
 
 .photo_menu div {
