@@ -41,7 +41,7 @@ header #logo {
 .main {
 	height: 500px;
 	text-align: center;
-	min-width: 1024;
+	min-width: 1048;
 	width: 100%;
 	
 	background: #c4bbaa; /* for non-css3 browsers */
