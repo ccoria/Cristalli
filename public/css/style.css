@@ -42,7 +42,7 @@ header #logo {
 	height: 500px;
 	text-align: center;
 	min-width: 1024px;
-	width: auto;
+	width: 100%;
 	
 	background: #c4bbaa; /* for non-css3 browsers */
     background: -moz-linear-gradient(top, #c4bbaa, #e3dfd6); /* for firefox 3.6+ */
