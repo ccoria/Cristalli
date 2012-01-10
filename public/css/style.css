@@ -1,6 +1,6 @@
 
 body {
-	background: #a7997e;
+	background: #c4bbaa;
 	
 	background: -moz-linear-gradient(top, #8d8065, #c3baa9 10%); /* for firefox 3.6+ */
 	background: -webkit-linear-gradient(top, #8d8065, #c3baa9 10%); /* for webkit browsers */
@@ -41,8 +41,7 @@ header #logo {
 .main {
 	height: 500px;
 	text-align: center;
-	min-width: 1048;
-	width: 100%;
+	min-width: 1024px;
 	
 	background: #c4bbaa; /* for non-css3 browsers */
     background: -moz-linear-gradient(top, #c4bbaa, #e3dfd6); /* for firefox 3.6+ */
