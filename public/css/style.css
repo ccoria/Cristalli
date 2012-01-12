@@ -1,12 +1,6 @@
-
 body {
-	background: #c4bbaa;
-	
-	background: -moz-linear-gradient(top, #8d8065, #c3baa9 10%); /* for firefox 3.6+ */
-	background: -webkit-linear-gradient(top, #8d8065, #c3baa9 10%); /* for webkit browsers */
-	font-family: Lucida, Helvetica Neue;
+	background: #c3baa9;
 
-    
 	margin: 0px;
 	padding: 0px;
 }
@@ -58,13 +52,26 @@ br {
 
 
 .content {
-    text-align: center;
     width: 100%;
     
 	text-align: center;
 	position: absolute;
 	z-index: 1;
-	width: 100%;
+}
+
+.content h1 {
+    background-color: #85827b;
+    height: 40px;
+    width: 630px;
+    _position: absolute;
+    z-index: 2;
+    
+    text-align: left;
+    padding: 5px 0px 0px 20px;
+    
+    margin: 10px auto 0px auto;
+    left: 0;
+    right: 0;
 }
 
 .main_menu {
@@ -91,8 +98,14 @@ br {
 	
 }
 
-footer {
-    border 1px solid red;
+.footer {
+    min-height: 50px;
+    
+    background: #c3baa9;
+	background: -moz-linear-gradient(top, #8d8065, #c3baa9); /* for firefox 3.6+ */
+	background: -webkit-linear-gradient(top, #8d8065, #c3baa9); /* for webkit browsers */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8d8065', endColorstr='#c3baa9'); /* for IE */
+	font-family: Lucida, Helvetica Neue;
 }
 
 .rounded_corners {
@@ -115,7 +128,7 @@ footer {
     top: 200px;
     text-align: justify;
     
-    padding: 17px 20px 0px 20px;
+    padding: 5px 20px 0px 20px;
     font-family: Lucida, Helvetica Neue;
     z-index: 1;
     background: white;
@@ -128,21 +141,6 @@ footer {
 .box a {
     color: #cb2148;
     font-weight: 200;
-}
-
-.content h1 {
-    background-color: #85827b;
-    height: 40px;
-    width: 630px;
-    _position: absolute;
-    z-index: 2;
-    
-    text-align: left;
-    padding: 5px 0px 0px 20px;
-    
-    margin: 10px auto 0px auto;
-    left: 0;
-    right: 0;
 }
 
 .box h2 {
@@ -190,7 +188,7 @@ footer {
 }
 
 #modules {
-    margin-top: 10px;
+    padding-top: 10px;
 }
 
 #modules .mini-box div {
