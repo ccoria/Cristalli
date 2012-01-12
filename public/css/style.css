@@ -28,12 +28,12 @@ br {
     text-align: center;
 }
 
-header { 
+.logo_container { 
 	background-color: #c4bbaa;
 	text-align: center; 
 }
 
-header #logo {
+.logo_container img {
 	margin-top: 16px;
 	margin-bottom: 10px;
 }

@@ -12,36 +12,40 @@
 <body>
     <div id="container">
         <header>
-            <a href="/home">
-                <img id="logo" class="logo" 
-                     width="340" height="124"
-                     alt="Cristalli Eventos Personalizados" 
-                     title="Cristalli Eventos Personalizados"
-                     src="/images/logo.png" />
-             </a>
+            <div class="logo_container">
+                <a id="logo" href="/home">
+                    <img class="logo" 
+                         width="340" height="124"
+                         alt="Cristalli Eventos Personalizados" 
+                         title="Cristalli Eventos Personalizados"
+                         src="/images/logo.png" />
+                 </a>
+             </div>
         </header>
         <div id="main" class="main" role="main">
             <%= yield %>
         </div>
-        <nav id="main_menu" class="main_menu">
-            <ul>
-                <li>
-                    <%= link_to image_tag("/images/menu/conceito.png", :size => "135x89", :alt => "Conceito"),
-                                          "/conceito" %>
-                </li>
-                <li>
-                    <%= link_to image_tag("/images/menu/modulos.png", :size => "125x76", :alt => "Módulos"),
-                                          "/modulos" %>
-                </li>
-                <li>
-                    <%= link_to image_tag("/images/menu/fotos.png", :size => "114x72", :alt => "Fotos"),
-                                          "/fotos" %>
-                </li>
-                <li>
-                    <%= link_to image_tag("/images/menu/contato.png", :size => "125x76", :alt => "Contato"),
-                                          "/contato" %>
-                </li>
-            </ul>
+        <nav id="main_menu">
+            <div class="main_menu">
+                <ul>
+                    <li>
+                        <%= link_to image_tag("/images/menu/conceito.png", :size => "135x89", :alt => "Conceito"),
+                                              "/conceito" %>
+                    </li>
+                    <li>
+                        <%= link_to image_tag("/images/menu/modulos.png", :size => "125x76", :alt => "Módulos"),
+                                              "/modulos" %>
+                    </li>
+                    <li>
+                        <%= link_to image_tag("/images/menu/fotos.png", :size => "114x72", :alt => "Fotos"),
+                                              "/fotos" %>
+                    </li>
+                    <li>
+                        <%= link_to image_tag("/images/menu/contato.png", :size => "125x76", :alt => "Contato"),
+                                              "/contato" %>
+                    </li>
+                </ul>
+            </div>
         </nav>
         <footer>
         </footer>
