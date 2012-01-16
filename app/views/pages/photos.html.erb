@@ -1,45 +1,63 @@
-<div class="photo_menu photo_menu_left">
-    <nav>
-        <div class="col1">
-            <% (1..21).each do |thumb_index| %>
-            
-            <a href="/fotos/<%= thumb_index %>">
-                <img src="/images/thumbs/<%= thumb_index %>.jpg" height="35px" width="35px" />
-            </a>
-            
-            <% end %>
-        </div>
-    </nav>
-</div>
+<%
+if (@photo >= 0 and @photo < @photos_count)
+    @next_photo = @photo+1
+end
 
-<div id="photos" class="box">
-    <div id="photo" class="photo">
-        <img src="/images/photos/<%= @photo %>.jpg" />
-        
-        <div class="prev_and_next">
-            <% if @photo > 0 %>
-                <a href="/fotos/<%= @photo-1 %>">Anterior</a>
-            <% end %>
-            <% if @photo > 0 and @photo < @photos_count %>
-             | 
-            <% end %>
-            <% if @photo < @photos_count %>
-            <a href="/fotos/<%= @photo+1 %>">Próxima</a>
-            <% end %>
+if (@photo <= @photos_count and @photo > 0)
+    @prev_photo = @photo-1
+end
+
+@main_photo_index = (@photo >= (@photos_count-1)) ? @prev_photo : @next_photo;
+
+%>
+
+<div class="content">
+    <div id="photos" class="box">
+
+        <div class="photo_menu photo_menu_left">
+            <nav>
+                <% (1..21).each do |thumb_index| %>
+
+                <a href="/fotos/<%= thumb_index %>">
+                    <img src="/images/thumbs/<%= thumb_index %>.jpg" height="35px" width="35px" />
+                </a>
+
+                <% end %>
+            </nav>
         </div>
+
+        <div id="photo" class="photo">
+            <a href="/fotos/<%= @main_photo_index %>">
+                <img src="/images/photos/<%= @photo %>.jpg" />
+            </a>
+
+            <div class="prev_and_next">
+                
+                <% if @prev_photo %>
+                    <a href="/fotos/<%= @prev_photo %>">Anterior</a>
+                <% end %>
+                
+                <% if @prev_photo and @next_photo %>
+                 | 
+                <% end %>
+                
+                <% if @next_photo %>
+                    <a href="/fotos/<%= @next_photo %>">Próxima</a>
+                <% end %>
+            </div>
+        </div>
+
+        <div class="photo_menu photo_menu_right">
+            <nav>
+                <% (22..@photos_count).each do |thumb_index| %>
+
+                <a href="/fotos/<%= thumb_index %>">
+                    <img src="/images/thumbs/<%= thumb_index %>.jpg" height="35px" width="35px" />
+                </a>
+
+                <% end %>
+            </nav>
+        </div>
+
     </div>
-</div>
-
-<div class="photo_menu photo_menu_right">
-    <nav>
-        <div class="col1">
-            <% (22..@photos_count).each do |thumb_index| %>
-            
-            <a href="/fotos/<%= thumb_index %>">
-                <img src="/images/thumbs/<%= thumb_index %>.jpg" height="35px" width="35px" />
-            </a>
-            
-            <% end %>
-        </div>
-    </nav>
 </div>

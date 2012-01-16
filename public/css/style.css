@@ -263,13 +263,16 @@ br {
 }
 
 #photos {
-    height: 400px;
     top: 160px;
     text-align: center;
     background: none;
+    width: 1013px;
+    padding: 0px;
 }
 
 #photos .photo {
+    display: inline;
+    float: left;
 }
 
 #photos img {
@@ -285,27 +288,18 @@ br {
 }
 
 .photo_menu {
-    position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0px;
-    right: 0px;
-    
-    top: 10px;
-    height: 600px;
-    width: 180px;    
+    display: inline;
+    float: left;
+    width: 145px;
+    margin-top: -145px;
 }
 
 .photo_menu_left {
-    right: 830px;
+    margin-right: 85px;
 }
 
 .photo_menu_right {
-    left: 830px;
-}
-
-.photo_menu nav {
-    height: 500px;
+    margin-left: 85px;
 }
 
 .photo_menu a {
