@@ -7,25 +7,13 @@ if (@photo <= @photos_count and @photo > 0)
     @prev_photo = @photo-1
 end
 
-@main_photo_index = (@photo >= (@photos_count-1)) ? @prev_photo : @next_photo;
+@main_photo_index = (@next_photo <= @photos_count) ? @next_photo : 0;
 
 %>
 
 <div class="content">
-    <div id="photos" class="box">
-
-        <div class="photo_menu photo_menu_left">
-            <nav>
-                <% (1..21).each do |thumb_index| %>
-
-                <a href="/fotos/<%= thumb_index %>">
-                    <img src="/images/thumbs/<%= thumb_index %>.jpg" height="35px" width="35px" />
-                </a>
-
-                <% end %>
-            </nav>
-        </div>
-
+    <div id="photos" class="_box">
+        
         <div id="photo" class="photo">
             <a href="/fotos/<%= @main_photo_index %>">
                 <img src="/images/photos/<%= @photo %>.jpg" />
@@ -46,17 +34,29 @@ end
                 <% end %>
             </div>
         </div>
+        
+        <div class="photo_menu_container">
+            <spam class="photo_menu" style="display:_none">
+                    <div class="gallery gallery_left">
+                        <nav>
+                            <% (1..21).each do |thumb_index| %>
+                            <a href="/fotos/<%= thumb_index %>">
+                                <img src="/images/thumbs/<%= thumb_index %>.jpg" height="35px" width="35px" />
+                            </a>
+                            <% end %>
+                        </nav>
+                    </div>
 
-        <div class="photo_menu photo_menu_right">
-            <nav>
-                <% (22..@photos_count).each do |thumb_index| %>
-
-                <a href="/fotos/<%= thumb_index %>">
-                    <img src="/images/thumbs/<%= thumb_index %>.jpg" height="35px" width="35px" />
-                </a>
-
-                <% end %>
-            </nav>
+                    <div class="gallery gallery_right">
+                        <nav>
+                            <% (22..@photos_count).each do |thumb_index| %>
+                            <a href="/fotos/<%= thumb_index %>">
+                                <img src="/images/thumbs/<%= thumb_index %>.jpg" height="35px" width="35px" />
+                            </a>
+                            <% end %>
+                        </nav>
+                    </div>
+            </spam>
         </div>
 
     </div>

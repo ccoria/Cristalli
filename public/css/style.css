@@ -46,14 +46,10 @@ br {
 	text-align: left;
 }
 
-.__main h1 {
-
+.main a {
+    color: #cb2148;
+    font-weight: 200;
 }
-
-._main h1 img {
-    margin: 0px;
-}
-
 
 .content {
     width: 100%;
@@ -99,7 +95,6 @@ br {
 .main_menu li {
 	display: inline;
 	padding: 0px 10px 0px 0px;
-	
 }
 
 .footer {
@@ -143,11 +138,6 @@ br {
 ._transparent {
     opacity: 0.6;
     filter:alpha(opacity=10);
-}
-
-.box a {
-    color: #cb2148;
-    font-weight: 200;
 }
 
 .box p {
@@ -197,12 +187,6 @@ br {
     display: block;
     float: left;
     background-color: #f8f6f2;
-    
-    /*behavior: url(/css/border-radius.htc);
-    -moz-border-radius: 15px;
-    -webkit-border-radius: 15px;
-    -khtml-border-radius: 15px;
-    border-radius: 15px;*/
 }
 
 #modules .mini-box h2 {
@@ -210,7 +194,6 @@ br {
     font-weight: 300;
     
     margin: 0px 0px 0px 0px;
-    _background: #e7e4d9;
     background: #e4e1de;
     padding: 7px 0px 5px 6px;
 }
@@ -263,16 +246,12 @@ br {
 }
 
 #photos {
-    top: 160px;
     text-align: center;
     background: none;
-    width: 1013px;
-    padding: 0px;
+    width: 100%;
 }
 
 #photos .photo {
-    display: inline;
-    float: left;
 }
 
 #photos img {
@@ -287,18 +266,29 @@ br {
     font-weight: 400;
 }
 
+.photo_menu_container {
+    position: absolute;
+    top: -145px;
+    width: 100%;
+}
+
 .photo_menu {
+    margin: 1px solid red;
+    float: none;
+    width: 800px;
+}
+
+.gallery {
     display: inline;
     float: left;
     width: 145px;
-    margin-top: -145px;
 }
 
-.photo_menu_left {
+.gallery_left {
     margin-right: 85px;
 }
 
-.photo_menu_right {
+.gallery_right {
     margin-left: 85px;
 }
 
@@ -310,10 +300,6 @@ br {
     border: 5px solid #645e5d;
     margin: 0px 0px 5px 0px;
 }
-
-.photo_menu div {
-    display: inline;
-}   
 
 #contact ul {
     list-style: none;
