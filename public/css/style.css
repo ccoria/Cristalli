@@ -173,23 +173,18 @@ br {
     background-color: #403f39;
     color: white;
     font-size: 15px;
-    
 }
+
+/***************/
+/* MODULES ****/
+/*************/
 
 #modules {
-    padding-top: 10px;
+    padding-top: 17px;
+    height: 310px;
 }
 
-#modules .mini-box div {
-    border: 1px solid #ceccca;
-    width: 187px;
-    position: relative;
-    display: block;
-    float: left;
-    background-color: #f8f6f2;
-}
-
-#modules .mini-box h2 {
+#modules h2 {
     font-size: 18px;
     font-weight: 300;
     
@@ -198,13 +193,10 @@ br {
     padding: 7px 0px 5px 6px;
 }
 
-#modules .mini-box h2 img {
+#modules h2 img {
     margin-top: -5px;
     margin-right: 5px;
-}
-
-.mini-box {
-    margin-top: 7px;
+    border: 0px;
 }
 
 #modules ul {
@@ -221,6 +213,15 @@ br {
     margin-top: 9px;
 }
 
+#modules span {
+    border: 1px solid #ceccca;
+    width: 187px;
+    position: relative;
+    display: inline;
+    float: left;
+    background-color: #f8f6f2;
+}
+
 .module_big {
     height: 289px;
 }
@@ -230,20 +231,27 @@ br {
 }
 
 .module_1 {
-    margin: 0px 16px 0px 0px;
+    
 }
-
 .module_2 {
-    margin: 0px 16px 0px 0px;
+    margin-left: 18px;
+    margin-right: 20px;
 }
 
 .module_3 {
-    margin: 15px 16px 0px 0px;
+    margin-left: 18px;
+    margin-top: 15px;
+    margin-right: 0px;
 }
 
 .module_4 {
-    margin: -138px 0px 0px 0px;
+    margin: -138px -10px 0px 18px;
 }
+
+
+/***************/
+/* PHOTOS *****/
+/*************/
 
 #photos {
     text-align: left;
