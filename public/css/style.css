@@ -246,12 +246,15 @@ br {
 }
 
 #photos {
-    text-align: center;
+    text-align: left;
     background: none;
     width: 100%;
 }
 
 #photos .photo {
+    text-align: center;
+    margin-top: 10px;
+    width: 100%;
 }
 
 #photos img {
@@ -266,30 +269,31 @@ br {
     font-weight: 400;
 }
 
-.photo_menu_container {
+.photo_menu {
+    border: 0px solid red;
     position: absolute;
+    text-align: center;
+    display: inline;
     top: -145px;
     width: 100%;
 }
 
-.photo_menu {
-    margin: 1px solid red;
-    float: none;
-    width: 800px;
-}
-
 .gallery {
-    display: inline;
-    float: left;
+    border: 0px solid blue;
+    display: inline-block;
     width: 145px;
 }
 
+.gallery div {
+    display: inline;
+}
+
 .gallery_left {
-    margin-right: 85px;
+    _margin-right: 85px;
 }
 
 .gallery_right {
-    margin-left: 85px;
+    margin-left: 700px;
 }
 
 .photo_menu a {

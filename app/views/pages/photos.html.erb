@@ -35,28 +35,30 @@ end
             </div>
         </div>
         
-        <div class="photo_menu_container">
-            <spam class="photo_menu" style="display:_none">
-                    <div class="gallery gallery_left">
-                        <nav>
-                            <% (1..21).each do |thumb_index| %>
-                            <a href="/fotos/<%= thumb_index %>">
-                                <img src="/images/thumbs/<%= thumb_index %>.jpg" height="35px" width="35px" />
-                            </a>
-                            <% end %>
-                        </nav>
+        <div class="photo_menu" style="">
+            <span class="gallery gallery_left">
+                <nav>
+                    <% (1..21).each do |thumb_index| %>
+                    <div>
+                        <a href="/fotos/<%= thumb_index %>">
+                            <img src="/images/thumbs/<%= thumb_index %>.jpg" height="35px" width="35px" />
+                        </a>
                     </div>
+                    <% end %>
+                </nav>
+            </span>
 
-                    <div class="gallery gallery_right">
-                        <nav>
-                            <% (22..@photos_count).each do |thumb_index| %>
-                            <a href="/fotos/<%= thumb_index %>">
-                                <img src="/images/thumbs/<%= thumb_index %>.jpg" height="35px" width="35px" />
-                            </a>
-                            <% end %>
-                        </nav>
+            <span class="gallery gallery_right">
+                <nav>
+                    <% (22..@photos_count).each do |thumb_index| %>
+                    <div>
+                        <a href="/fotos/<%= thumb_index %>">
+                            <img src="/images/thumbs/<%= thumb_index %>.jpg" height="35px" width="35px" />
+                        </a>
                     </div>
-            </spam>
+                    <% end %>
+                </nav>
+            </span>
         </div>
 
     </div>
