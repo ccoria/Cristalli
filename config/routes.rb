@@ -1,7 +1,8 @@
 Cristalli::Application.routes.draw do
   
-  root :to => 'errors#routing'
-  match '/home', :to => 'pages#home'
+  root :to => 'pages#home'
+  
+  match '/home' => redirect('/')
   
   match '/conceito', :to => 'pages#concept'
   
