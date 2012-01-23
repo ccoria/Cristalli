@@ -278,16 +278,27 @@ br {
 }
 
 .photo_menu {
-    border: 0px solid red;
+    border: 0px solid blue;
     position: absolute;
     text-align: center;
     display: inline;
+    vertical-align:top;
     top: -145px;
     width: 100%;
 }
 
+.photo_cover {
+    border: 0px solid red;
+    position: absolute;
+    display:inline-block;
+    top: 155px;
+    width: 600px;
+    height: 365px;
+    margin: 0px 40px 0px 40px;
+}
+
 .gallery {
-    border: 0px solid blue;
+    border: 0px solid green;
     display: inline-block;
     width: 145px;
 }
@@ -297,7 +308,7 @@ br {
 }
 
 .gallery_left {
-    _margin-right: 85px;
+    ___margin-right: 85px;
 }
 
 .gallery_right {
@@ -312,6 +323,10 @@ br {
     border: 5px solid #645e5d;
     margin: 0px 0px 5px 0px;
 }
+
+/*************/
+/* CONTACT **/
+/***********/
 
 #contact ul {
     list-style: none;

@@ -7,7 +7,7 @@ if (@photo <= @photos_count and @photo > 0)
     @prev_photo = @photo-1
 end
 
-@main_photo_index = (@next_photo <= @photos_count) ? @next_photo : 0;
+@main_photo_index = (@photo <= @photos_count) ? @next_photo : 0;
 
 %>
 
@@ -15,9 +15,7 @@ end
     <div id="photos" class="_box">
         
         <div id="photo" class="photo">
-            <a href="/fotos/<%= @main_photo_index %>">
-                <img src="/images/photos/<%= @photo %>.jpg" />
-            </a>
+            <img src="/images/photos/<%= @photo %>.jpg" />
 
             <div class="prev_and_next">
                 
@@ -47,6 +45,11 @@ end
                     <% end %>
                 </nav>
             </span>
+            
+            <a href="/fotos/<%= @main_photo_index %>">
+                <span id='photo_cover' class="photo_cover">
+                </span>
+            </a>
 
             <span class="gallery gallery_right">
                 <nav>
