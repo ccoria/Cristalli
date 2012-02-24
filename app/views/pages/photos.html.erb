@@ -20,7 +20,7 @@ end
             <div class="prev_and_next">
                 
                 <% if @prev_photo %>
-                    <a href="/fotos/<%= @prev_photo %>">Anterior</a>
+                    <a id="previous_photo" href="/fotos/<%= @prev_photo %>">Anterior</a>
                 <% end %>
                 
                 <% if @prev_photo and @next_photo %>
@@ -28,7 +28,7 @@ end
                 <% end %>
                 
                 <% if @next_photo %>
-                    <a href="/fotos/<%= @next_photo %>">Próxima</a>
+                    <a id="next_photo" href="/fotos/<%= @next_photo %>">Próxima</a>
                 <% end %>
             </div>
         </div>
