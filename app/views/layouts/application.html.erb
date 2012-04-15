@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Cristalli - Eventos Personalizados | <%= @title %></title>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <%= csrf_meta_tags %>
-  
-  <link rel="stylesheet" href="/css/html5_boilerplate.css">
-  <link rel="stylesheet" href="/css/style.css">
-  
+    <title>Cristalli - Eventos Personalizados | <%= @title %></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag "html5_boilerplate" %>
+    <%= stylesheet_link_tag "style" %>
+    
 </head>
 <body>
     <div id="container" class="container">
@@ -48,7 +48,7 @@
                     </li>
                     <li>
                         <%= link_to image_tag("/images/menu/contato.png", :size => "125x76", :alt => "Contato"),
-                                              "/contato" %>
+                                                "/contato" %>
                     </li>
                 </ul>
             </div>
@@ -62,16 +62,27 @@
     
     <script type="text/javascript">
 
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-29177036-1']);
-      _gaq.push(['_trackPageview']);
-
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-29177036-1']);
+        _gaq.push(['_trackPageview']);
+        
+        var analytics_url = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var jquery_url = "https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js";
+            
+        // start include.js
+        (function(l){l.include=function(b,g){function i(){}function o(e,b,d){var a,f;/\.css$/.test(e)?(a=c.createElement("link"),a.href=e,a.rel="stylesheet",a.type="text/css",c.head.appendChild(a),b()):(j++,a=c.createElement("script"),a.onload=a.onreadystatechange=function(a,c){c=0;a=this.readyState||a.type;!a.search("load|complete")&&!f&&(d?(e=function(){l[d]?m(b):setTimeout(e,h);++c>h&&(e=i)})():m(b),f=h)},a.async=!0,a.src=e,c[n].appendChild(a))}function m(b){function c(){!--j&&g()}b.length?b(c):(b(),c())}var c=document,n="body",j=0,h=1;!b.pop&&(b=[b]);g=g||i;(function p(d,a,f,k){if(!c[n])return setTimeout(p,h);for(d=b.length;d--;)k=i,f=!1,b[d].pop?(a=b[d][0],k=b[d][1],f=b[d][2]):a=b[d],o(a,k,f);!j&&g()})()}})(this);
+        
+        var include_callback = function () {
+            console.log("JS loaded!");
+            var images = $('#slides_container img');
+            console.log(images);
+        };
+        
+        include([
+            analytics_url,
+            jquery_url
+            ], include_callback);
+        
     </script>
 </body>
 </html>
