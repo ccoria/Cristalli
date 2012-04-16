@@ -72,10 +72,43 @@
         // start include.js
         (function(l){l.include=function(b,g){function i(){}function o(e,b,d){var a,f;/\.css$/.test(e)?(a=c.createElement("link"),a.href=e,a.rel="stylesheet",a.type="text/css",c.head.appendChild(a),b()):(j++,a=c.createElement("script"),a.onload=a.onreadystatechange=function(a,c){c=0;a=this.readyState||a.type;!a.search("load|complete")&&!f&&(d?(e=function(){l[d]?m(b):setTimeout(e,h);++c>h&&(e=i)})():m(b),f=h)},a.async=!0,a.src=e,c[n].appendChild(a))}function m(b){function c(){!--j&&g()}b.length?b(c):(b(),c())}var c=document,n="body",j=0,h=1;!b.pop&&(b=[b]);g=g||i;(function p(d,a,f,k){if(!c[n])return setTimeout(p,h);for(d=b.length;d--;)k=i,f=!1,b[d].pop?(a=b[d][0],k=b[d][1],f=b[d][2]):a=b[d],o(a,k,f);!j&&g()})()}})(this);
         
+        var start_slide_photo = function (photos) {
+            var photos_size = photos.length,
+                $photos = [];
+            
+            // jqueryfying elements  
+            $.each(photos, function (idx, value) {
+                $photos.push($(value));
+            });
+            
+            console.log($photos);
+            
+            var show_slide = function (index) {
+                console.log("received: " + index);
+                var current_index = (index && index < photos_size) ? index : 0,
+                    old_index = (current_index === 0) ? photos_size-1 : current_index-1,
+                    current_photo = $photos[current_index],
+                    old_photo = $photos[old_index];
+                
+                if (old_photo.is(":visible")) {
+                    old_photo.fadeOut();
+                }
+
+                current_photo.fadeIn(function () {
+                    setTimeout(function () {
+                        show_slide(current_index+1)
+                    }, 3000);
+                });
+            }
+            
+            // start to show imagem from 0
+            show_slide(0);
+        }
+        
         var include_callback = function () {
             console.log("JS loaded!");
             var images = $('#slides_container img');
-            console.log(images);
+            start_slide_photo(images);
         };
         
         include([

@@ -1,0 +1,8 @@
+Flavia's resolution:
+    1280 X 774
+    
+Cassiano's resolution:
+    1440 X 874
+    
+reference: http://www.javascriptkit.com/howto/newtech3.shtml
+
