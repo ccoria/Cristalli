@@ -8,7 +8,7 @@ require File.expand_path('../config/application', __FILE__)
 
 desc 'starting server on port 80 at localhost'
 task :server do
-  sh "rvmsudo rails server -p 80 -b localhost"
+  sh "rvmsudo rails server -p 80 -b 10.0.1.10"
 end
 
 desc 'starting server on port 80 at localhost'

@@ -6,14 +6,19 @@ var cristalli = {
     events_queue: {
         events: [],
         add: function (event_name, func) {
-            cristalli.events_queue.events[event_name] = func
+            cristalli.events_queue.events[event_name] = func;
         },
         
         consume: function () {
             for (var evt_index in cristalli.events_queue.events) {
-                var evt = cristalli.events_queue.events[evt_index]
+                var evt = cristalli.events_queue.events[evt_index];
                 if (typeof evt === 'function') {
-                    evt();
+                    try {
+                        evt();
+                    } catch (e) {
+                        //alert(e.message);
+                    }
+                    
                     cristalli.events_queue.events.splice(evt_index);
                 }
             }

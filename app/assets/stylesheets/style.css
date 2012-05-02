@@ -256,22 +256,31 @@ br {
 }
 
 #home .slides_container {
+    ___border: 1px solid green;
     margin-top: 30px;
-    /*border: 10px solid gray;
-        /*background-color: white;
-        padding: 20px;*/
+    padding: 0px;
+    text-align: center;
+    width: 100%;
+    vertical-align: top;
 }
 
 #home .slides_container div {
-    border: 3px solid #504a49;
+    ___border: 1px red solid;
+    clear: both;
     padding: 0px;
-    display: inline;
-    position: absolute;
-    margin-left: -260px;
+    display: block;
+    position: relative;
+    width: 530px;
+    margin: 0px auto 0px;
+    text-align: left;
 }
 
 #home .slides_container img {
+    border: 3px solid #504a49;
+    position: absolute;
     display: none;
+    margin: 0px;
+    padding: 0px;
 }
 
 

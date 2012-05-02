@@ -1,13 +1,11 @@
 <div id="home" class="content">
     <div class="slides_container" id="slides_container">
         <div>
-            <img width="520" height="346" src="/images/photos/0.jpg" />
-        </div>
-        <div>
-            <img width="520" height="346" src="/images/photos/1.jpg" />
-        </div>
-        <div>
-            <img width="520" height="346" src="/images/photos/2.jpg" />
+            <a href="/fotos">
+                <img width="520" height="346" src="/images/photos/1.jpg"/>
+                <img width="520" height="346" src="/images/photos/6.jpg" />
+                <img width="520" height="346" src="/images/photos/25.jpg" />
+            </a>
         </div>
     </div>
 </div>
@@ -15,7 +13,6 @@
 <% content_for :js_inline do  %>
     
     cristalli.events_queue.add("slide_show", function () {
-        
         var images = $('#slides_container img');
         start_slide_photo(images);
     });
