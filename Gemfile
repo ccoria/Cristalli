@@ -4,6 +4,7 @@ gem 'rails', '3.1.0'
 
 group :production do
   gem 'mysql'
+  gem 'uglifier'
 end
 
 group :development do

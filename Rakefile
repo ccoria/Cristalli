@@ -6,4 +6,14 @@ require 'rake/dsl_definition'
 
 require File.expand_path('../config/application', __FILE__)
 
+desc 'starting server on port 80 at localhost'
+task :server do
+  sh "rvmsudo rails server -p 80 -b localhost"
+end
+
+desc 'starting server on port 80 at localhost'
+task :serverprod do
+  sh "rvmsudo rails server -p 80 -b localhost -e production"
+end
+
 Cristalli::Application.load_tasks

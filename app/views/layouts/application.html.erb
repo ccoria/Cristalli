@@ -5,8 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag "html5_boilerplate" %>
-    <%= stylesheet_link_tag "style" %>
+    <%= stylesheet_link_tag "application" %>
     
 </head>
 <body>
@@ -55,70 +54,18 @@
         </nav>
         <footer>
             <div class="footer">
-                
             </div>
         </footer>
     </div> <!--! end of #container -->
     
-    <script type="text/javascript">
-
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-29177036-1']);
-        _gaq.push(['_trackPageview']);
-        
-        var analytics_url = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var jquery_url = "https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js";
-            
-        // start include.js
-        (function(l){l.include=function(b,g){function i(){}function o(e,b,d){var a,f;/\.css$/.test(e)?(a=c.createElement("link"),a.href=e,a.rel="stylesheet",a.type="text/css",c.head.appendChild(a),b()):(j++,a=c.createElement("script"),a.onload=a.onreadystatechange=function(a,c){c=0;a=this.readyState||a.type;!a.search("load|complete")&&!f&&(d?(e=function(){l[d]?m(b):setTimeout(e,h);++c>h&&(e=i)})():m(b),f=h)},a.async=!0,a.src=e,c[n].appendChild(a))}function m(b){function c(){!--j&&g()}b.length?b(c):(b(),c())}var c=document,n="body",j=0,h=1;!b.pop&&(b=[b]);g=g||i;(function p(d,a,f,k){if(!c[n])return setTimeout(p,h);for(d=b.length;d--;)k=i,f=!1,b[d].pop?(a=b[d][0],k=b[d][1],f=b[d][2]):a=b[d],o(a,k,f);!j&&g()})()}})(this);
-        
-        
-        // TODO: 
-        // - lazy load images and test on browsers
-        // - make it run only in home
-        // - put all scripts in files
-        
-        var start_slide_photo = function (photos) {
-            var photos_size = photos.length,
-                $photos = [];
-            
-            // jqueryfying elements  
-            $.each(photos, function (idx, value) {
-                $photos.push($(value));
-            });
-            
-            var show_slide = function (index) {
-                console.log("received: " + index);
-                var current_index = (index && index < photos_size) ? index : 0,
-                    old_index = (current_index === 0) ? photos_size-1 : current_index-1,
-                    current_photo = $photos[current_index],
-                    old_photo = $photos[old_index];
+    <%= javascript_include_tag "application" %>
+    
+    <script type="text/javascript">      
                 
-                if (old_photo.is(":visible")) {
-                    old_photo.fadeOut();
-                }
-
-                current_photo.fadeIn(function () {
-                    setTimeout(function () {
-                        show_slide(current_index+1)
-                    }, 3000);
-                });
-            }
-            
-            // start to show imagem from 0
-            show_slide(0);
-        }
+        <%= yield :js_inline %>
         
-        var include_callback = function () {
-            /*console.log("JS loaded!");
-            var images = $('#slides_container img');
-            start_slide_photo(images);*/
-        };
-        
-        include([
-            analytics_url,
-            jquery_url
-            ], include_callback);
+        // including all javascripts and, after all, consuming all assync functions
+        include(cristalli.urls, cristalli.events_queue.consume);
         
     </script>
 </body>
