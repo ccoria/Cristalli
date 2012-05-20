@@ -26,6 +26,21 @@ class PagesController < ApplicationController
 
   def contact
     @title = "Contato"
+    
+    #render "form_contact"
+  end
+  
+  def send_mail
+    name = params[:name]
+    email = params[:email]
+    fone = params[:phone]
+    body = params[:message]
+    
+    puts "Name #{name}\nemail #{email}\nfone #{fone}\nbody #{body}"
+    
+    redirect_to "/"
+    
+    #ContactMailer.contact_email("flavialiliane@yahoo.com.br", "Flavia Liliane Cordeiro Bastos Blanco Rodriguez", "").deliver
   end
 
 end

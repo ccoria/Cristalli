@@ -12,6 +12,8 @@ Cristalli::Application.routes.draw do
   match '/fotos/:id', :to => 'pages#photos'
   
   match '/contato', :to => 'pages#contact'
+  
+  match '/send_mail', :to => 'pages#send_mail'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
