@@ -36,11 +36,9 @@ class PagesController < ApplicationController
     fone = params[:phone]
     body = params[:message]
     
-    puts "Name #{name}\nemail #{email}\nfone #{fone}\nbody #{body}"
+    ContactMailer.contact_email(name, email, fone, body).deliver
     
     redirect_to "/"
-    
-    #ContactMailer.contact_email("flavialiliane@yahoo.com.br", "Flavia Liliane Cordeiro Bastos Blanco Rodriguez", "").deliver
   end
 
 end
