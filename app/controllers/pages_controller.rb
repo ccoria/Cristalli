@@ -24,10 +24,12 @@ class PagesController < ApplicationController
     end
   end
 
-  def contact
+  def form_contact
     @title = "Contato"
-    
-    #render "form_contact"
+  end
+  
+  def form_contact_confirmation
+    @title = "Mensagem enviada com sucesso"
   end
   
   def send_mail
@@ -35,10 +37,10 @@ class PagesController < ApplicationController
     email = params[:email]
     fone = params[:phone]
     body = params[:message]
+        
+    ContactMailer.contact_email(name, email, fone, body, request.remote_ip).deliver
     
-    ContactMailer.contact_email(name, email, fone, body).deliver
-    
-    redirect_to "/"
+    redirect_to "/mensagem_enviada"
   end
 
 end

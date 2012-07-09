@@ -2,24 +2,67 @@
     <h1><img src="images/titles/contato.png" width="139" height="17" alt="Contato" title="Contato"></h1>
     <div class="box transparent">
         
-        <form method="POST" action="send_mail">
+        <form method="POST" action="send_mail" id="send_mail_form">
             
             <div id="name_field">
-                <label for="name">Name<label><input type="text" name="name" />
+                <label for="name">Nome</label>
+                <input size="60" type="text" id="name_input" name="name" placeholder="Nome" />
             </div>
             <div id="email_field">
-                <label for="email">Email<label><input type="text" name="email" />
+                <label for="email">Email</label>
+                <input size="50" type="text" id="email_input" name="email" placeholder="Email" />
             </div>
             <div id="fone_field">
-                <label for="phone">Fone<label><input type="text" name="phone" />
+                <label for="phone">Fone</label>
+                <input size="12" type="text" name="phone" placeholder="Fone" />
             </div>
             <div id="message_field">
-                <label for="message">Message<label><textarea type="text" name="message"></textarea>
+                <label for="message">Mensagem</label>
+                <textarea type="text" id="message_input" name="message" class="message" rows="7" placeholder="Mensagem"></textarea>
             </div>
             
-            <input type="submit" value="Enviar" />
+            <input type="submit" value="Enviar" id="send_button" />
             
         </form>
         
+        <div class="contact_footer">
+            <span class="tel">(11) 8932-3136</span> ou <span class="tel">(11) 9149-2131</span>
+            <a class="email" href="mailto:contato@cristallieventos.com.br">contato@cristallieventos.com.br</a>
+        </div>
+        
     </div>
 </div>
+
+<% content_for :js_inline do  %>
+    
+//    cristalli.events_queue.add("over_label", function () {
+//        
+//        var send_button = $("#send_button"),
+//            send_mail_form = $("#send_mail_form"),
+//            name_input = $("#name_input"),
+//            email_input = $("#email_input"),
+//            message_input = $("#message_input");
+//            
+//        var is_form_valid = function () {
+//            var all_forms_filled = (name_input.val() !== "" && email_input.val() !== "" && message_input.val() !== "")
+//            
+//            return all_forms_filled;
+//        }
+//        
+//        send_button.click(function () {
+//            console.log("trying...");
+//            send_button.val("Enviando...");
+//            send_button.prop("disabled", true);
+//            
+//            if (is_form_valid()) {
+//                send_mail_form.submit();
+//            } else {
+//                alert("Por favor preencha os campos Nome, Email e Mensagem");
+//                send_button.val("Enviar");
+//            }
+//            
+//        });
+//        
+//    });
+    
+<% end %>
