@@ -11,7 +11,7 @@ Cristalli::Application.routes.draw do
   match '/fotos', :to => 'pages#photos'
   match '/fotos/:id', :to => 'pages#photos'
   
-  match '/contato', :to => 'pages#form_contact'
+  match '/contato', :to => 'pages#contact'
   match '/mensagem_enviada', :to => 'pages#form_contact_confirmation'
   
   match '/send_mail', :to => 'pages#send_mail'

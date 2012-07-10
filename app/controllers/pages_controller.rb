@@ -23,6 +23,10 @@ class PagesController < ApplicationController
       redirect_to "/fotos"
     end
   end
+  
+  def contact
+    @title = "Contatos"
+  end
 
   def form_contact
     @title = "Contato"
