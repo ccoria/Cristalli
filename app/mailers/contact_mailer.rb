@@ -6,7 +6,7 @@ class ContactMailer < ActionMailer::Base
   default :from => 'site@cristallieventos.com.br'
   
   def contact_email(name, from, phone, body, ip)
-    @subject = "Site: " + name
+    @subject = "Site: #{name}"
     @body = "Nome: #{name} \nFone: #{phone} \nEmail: #{from} \n\nMensagem:\n-----------------\n #{body} \n\n\n-----------------\n User IP: #{ip}"
     
     mail(:subject => filter_encoding(@subject), 
